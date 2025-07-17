@@ -1,0 +1,200 @@
+@font-face {
+    font-family: charter;
+    src: url(/fonts/charter-regular.otf);
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: charter;
+    src: url(/fonts/charter-italic.otf);
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: charter;
+    src: url(/fonts/charter-bold.otf);
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: charter;
+    src: url(/fonts/charter-bold-italic.otf);
+    font-style: italic;
+    font-weight: bold;
+}
+
+:root {
+    font-size: 18px;
+    --gray30: #212121;
+    --gray20: #212429;
+    --gray10: #616161;
+}
+
+body {
+    color: var(--gray30);
+    font-family: charter;
+    margin: 0;
+}
+
+a {
+    color: var(--gray30);
+}
+
+header {
+    top: 64px;
+    font-size: 14px;
+    width: 188px;
+    color: var(--gray10);
+    position: absolute;
+    left: -232px;
+}
+
+header a {
+    color: var(--gray10);
+    text-decoration: none;
+}
+
+header a:hover {
+    color: var(--gray30);
+}
+
+nav details summary {
+    font-weight: bold;
+    line-height: 24px;
+}
+
+header li {
+    margin-bottom: 16px;
+}
+
+h1 {
+    font-size: 60PX;
+    margin-top: 64px;
+    margin-bottom: 16px;
+    font-weight: normal;
+}
+
+h1+p {
+    margin-bottom: 64px;
+}
+
+hr {
+    margin: 64px 0;
+}
+
+h2 {
+    font-size: 32px;
+    margin: 64px 0 40px;
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 1, 5em;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    font-weight: normal;
+    position: sticky;
+    top: 0;
+    background: white;
+}
+
+pre {
+    background: #FEC62E;
+    padding: 40px;
+    font-family: Roboto;
+    line-height: 24px;
+}
+
+blockquote {
+    font-size: 24px;
+    margin: 32px 0;
+    padding-left: 16px;
+    line-height: 24px;
+    border-left: 4px solid var(--gray30);
+}
+
+blockquote span {
+    color: var(--gray10);
+}
+
+blockquote span::before {
+    content: '-';
+}
+
+.header {
+    position: sticky;
+    top: 0;
+}
+
+.header-content {
+    position: absolute;
+}
+
+.wrapper {
+    width: 902px;
+    margin: auto;
+}
+
+.header-content {
+    position: relative;
+}
+
+.main-content {
+    background: white;
+}
+
+.hero {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.219), transparent), url(../imagenes/patron-1.png);
+    height: 350px;
+}
+
+.section-conten {
+    margin-top: 164px;
+}
+
+.section-conten:first-of-type {
+    margin: 0;
+}
+
+.section-conten ol li {
+    line-height: 24px;
+}
+
+.section-conten ul li {
+    margin-bottom: 16px;
+}
+
+.section-conten+hr {
+    display: none;
+}
+
+.section-conten img {
+    margin-top: 40px;
+}
+
+.section-conten {
+    counter-reset: titlelist;
+}
+
+.section-conten h3 {
+    counter-increment: titlelist;
+    padding-bottom: 8px;
+}
+
+.section-conten h3::before {
+    content: counter(titlelist, decimal) '. ';
+}
+
+.section-conten h3::after {
+    content: "";
+    width: 100px;
+    height: 4px;
+    background: var(--gray30);
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
